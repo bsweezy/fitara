@@ -6,6 +6,8 @@ permalink: /schema/
 filename: schema.md
 ---
 
+## Tips for Working with JSON
+
 #### JSON File Format
 JSON is a lightweight data-exchange format that is very easy to read, parse and generate. Based on a subset of the JavaScript programming language, JSON is a text format that is optimized for data interchange. JSON is built on two structures: (1) a collection of name/value pairs and (2) an ordered list of values.
 
@@ -17,6 +19,16 @@ The JSON schemas listed on this page are case sensitive. The schemas uses a came
 > Incorrect: `FirstName`  
 > Incorrect: `firstname`  
 > incorrect: `FIRSTNAME`  
+
+#### Tools for Working with JSON Formats
+
+The following resources contain helpful tools for working with JSON data format:
+
+* [Tabular to JSON Converter](http://www.csvjson.com/csv2json): to add a new strategy to your agency’s JSON file, first ensure that all of the columns have the correct field names and are arranged in the correct order. In Microsoft Excel: highlight and copy the new cost savings and avoidance data you wish to add to your JSON file, making sure to include the column headings, and paste that data into the box on the left side of the page and click the button saying “Convert”. The right side window will show your data in a basic JSON structure. In order to conform with the schema, adjust the “amount”, “netOrGross”, and “relatedUIIs” fields as necessary to mimic the spacing, indentation, brackets, colons, and quotation markings in the sample. 
+
+* [JSON Validator](http://jsonlint.com/): Copy and paste the contents of your updated JSON file into the window and click the “Validate” button. The tool will check whether the data is written correctly. If any brackets, quotation marks, colons, or other markings are missing from your file, these issues will be shown to you in error messages beneath the window.
+
+* [JSON Schema Validator](http://jsonschemalint.com/draft4/): Using the link to the schema provided on this page, copy and paste the schema text into the window on the left side of the page. Then, copy and paste your valid JSON file in the window on the right. Any errors or missing information will be shown immediately in the space below your JSON file.
 
 ## Agency FITARA Milestones
 
@@ -173,13 +185,7 @@ OMB asks agency submitters to:
 
 Before the close of the IDC quarter, identifying the JSON dataset as “[Agency] IT Reform Cost Savings/Avoidance” in your Enterprise Data Inventory and Public Data Listings. Your agency should update this data on a rolling basis as savings are realized, and must ensure that the file is updated with all savings realized in a given quarter during the week prior to the IDC collection deadline.
 
-The following resources contain helpful tools for working with JSON data format:
 
-* [Tabular to JSON Converter](http://www.csvjson.com/csv2json): to add a new strategy to your agency’s JSON file, first ensure that all of the columns have the correct field names and are arranged in the correct order. In Microsoft Excel: highlight and copy the new cost savings and avoidance data you wish to add to your JSON file, making sure to include the column headings, and paste that data into the box on the left side of the page and click the button saying “Convert”. The right side window will show your data in a basic JSON structure. In order to conform with the schema, adjust the “amount”, “netOrGross”, and “relatedUIIs” fields as necessary to mimic the spacing, indentation, brackets, colons, and quotation markings in the sample. 
-
-* [JSON Validator](http://jsonlint.com/): Copy and paste the contents of your updated JSON file into the window and click the “Validate” button. The tool will check whether the data is written correctly. If any brackets, quotation marks, colons, or other markings are missing from your file, these issues will be shown to you in error messages beneath the window.
-
-* [JSON Schema Validator](http://jsonschemalint.com/draft4/): Using the link to the schema provided on this page, copy and paste the schema text into the window on the left side of the page. Then, copy and paste your valid JSON file in the window on the right. Any errors or missing information will be shown immediately in the space below your JSON file.
 
 {: .table .table-striped}
 Field Name                          | Data Type                                                                 | Required? | Notes
