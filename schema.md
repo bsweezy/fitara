@@ -41,6 +41,7 @@ Field Name                         | Data Type                                  
 
 #### Agency FITARA Milestones JSON Syntax Example
 
+~~~json
 {
   "milestoneDocument": [
     {
@@ -66,6 +67,7 @@ Field Name                         | Data Type                                  
     }
   ]
 }
+~~~
 
 *[Agency FITARA Milestones JSON Schema](https://management.cio.gov/schemaexamples/FITARAMilestonesSchema.json)*
 
