@@ -18,6 +18,58 @@ The JSON schemas listed on this page are case sensitive. The schemas uses a came
 > Incorrect: `firstname`  
 > incorrect: `FIRSTNAME`  
 
+## Agency FITARA Milestones
+
+First, each milestones JSON document must include a "milestoneDocument" section providing the overall date of last update to the milestones items.
+
+{: .table .table-striped}
+Field Name                         | Data Type                                           | Required? | Notes
+--------------                     | --------------                                      | ----------| --------------
+**updatedDate**                    | String (yyyy-mm-dd)                                 | Yes       |           
+
+Then, create an entry for each of your agency's FITARA milestones, providing the following information for each:
+
+{: .table .table-striped}
+Field Name                         | Data Type                                           | Required? | Notes
+--------------                     | --------------                                      | ----------| --------------
+**milestoneID**                    | Int (3)                                             | Yes       |
+**milestoneDesc**                  | String (500)                                         | Yes       |
+**milestoneTargetCompletionDate**  | String (yyyy-mm-dd)                                 | Yes       | JSON doesn't have a "date" type so use a string, but format as 2016-12-25
+**milestoneStatus**                | Select: NotStarted, InProgress, Complete, Deferred  | Yes       | 
+**milestoneStatusDesc**            | String (500)					 | Yes        | Describe in detail agency responses to status (e.g. ongoing actions, dependencies, partial milestones).
+**commonBaselineArea**             | Select: budgetFormulation, budgetExecution, acquisition, organizationAndWorkforce                                        | Yes        | 
+
+#### Agency FITARA Milestones JSON Syntax Example
+
+{
+  "milestoneDocument": [
+    {
+      "updatedDate": "2016-04-30"
+    }
+  ],
+  "milestones": [
+    {
+      "milestoneID": "1",
+      "milestoneDesc": "Finalize adoption of revised department-wide policy for IT Investment Review Boards",
+      "milestoneTargetCompletionDate": "2016-09-01",
+      "milestoneStatus": "InProgress",
+      "milestoneStatusDesc": "The revised policy is currently under the review of general counsel, expected to clear this stage by the end of May 2016",
+      "commonBaselineArea": "acquisition"
+    },
+    {
+      "milestoneID": "2",
+      "milestoneDesc": "Conduct training for department budget officers to share new budget formulation rules including CIO staff",
+      "milestoneTargetCompletionDate": "2016-02-01",
+      "milestoneStatus": "Completed",
+      "milestoneStatusDesc": "65 budget officer staff attended the training, including representatives from 12 agencies.",
+      "commonBaselineArea": "budgetFormulation"
+    }
+  ]
+}
+
+*[Agency FITARA Milestones JSON Schema](https://management.cio.gov/schemaexamples/FITARAMilestonesSchema.json)*
+
+
 ## Bureau IT Leadership Directory 
 Each agency is expected to post a JSON file for their Bureau IT Leadership Directory to the following URL path: [agency.gov]/digitalstrategy/bureaudirectory.json
 
